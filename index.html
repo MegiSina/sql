@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spitali Gjerman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://t3.ftcdn.net/jpg/05/14/36/48/360_F_514364850_xLOQX6SOY2qcjAIcTowsi3xYvHmhmvs0.jpg" alt="Logo" class="logo">
+        <h1>Spitali Gjerman</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Shërbimet</a></li>
+                <li><a href="#about">Rreth Nesh</a></li>
+                <li><a href="#contact">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Në Spitalin Tonë ju mund te gjeni:</h1>
+            <p>Shërbime të specializuara për kujdesin tuaj shëndetësor</p>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="slide-in-section">
+        <div class="info-panel">
+            <h2>Mirë se vini në spitalin tonë!</h2>
+            <p>Këtu, ne ofrojmë shërbime shëndetësore të cilësisë së lartë me përkushtim.</p>
+        </div>
+        <div class="login-panel">
+            <h2>Login</h2>
+            <!-- The form submits to the Spring Controller -->
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Other Sections (Services, About, Contact) -->
+    <!-- These remain unchanged as in your current HTML code -->
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Patient</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Register Patient</h2>
+    <form action="/submit_patient" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display success message here -->
+    <div>
+        <p th:text="${message}"></p>
+    </div>
+</body>
+</html>
