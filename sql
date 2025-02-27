@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS [doktori];
+DROP TABLE IF EXISTS 'doktori';
 
 CREATE TABLE [doktori] (
   [DoktoriID] int NOT NULL,
